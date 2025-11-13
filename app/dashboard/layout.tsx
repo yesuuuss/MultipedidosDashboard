@@ -14,16 +14,16 @@ export default function DashboardLayout({
           <a href="/dashboard" className="block py-2 px-4 hover:bg-gray-800">
             Dashboard
           </a>
-          <a href="/dashboard/facturas" className="block py-2 px-4 hover:bg-gray-800">
+          <a href="/facturas" className="block py-2 px-4 hover:bg-gray-800">
             Facturas
           </a>
-          <a href="/dashboard/clientes" className="block py-2 px-4 hover:bg-gray-800">
+          <a href="/clientes" className="block py-2 px-4 hover:bg-gray-800">
             Clientes
           </a>
-          <a href="/dashboard/pedidos" className="block py-2 px-4 hover:bg-gray-800">
+          <a href="/pedidos" className="block py-2 px-4 hover:bg-gray-800">
             Pedidos
           </a>
-          <a href="/dashboard/proveedores" className="block py-2 px-4 hover:bg-gray-800">
+          <a href="/proveedores" className="block py-2 px-4 hover:bg-gray-800">
             Proveedores
           </a>
         </nav>
