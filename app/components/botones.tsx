@@ -7,12 +7,34 @@ import FormularioProveedor from './formulario-proveedor';
 import FormularioFactura from './formulario-factura';
 import FormularioPedido from './formulario-pedido';
 
-// Botón para crear clientes
-export function CrearCliente() {
+
+interface CrearClienteProps {
+  onSuccess?: () => void;
+}
+
+interface CrearProveedorProps {
+  onSuccess?: () => void;
+}
+
+interface CrearFacturaProps {
+  onSuccess?: () => void;
+}
+
+interface CrearPedidoProps {
+  onSuccess?: () => void;
+}
+
+
+export function CrearCliente({ onSuccess }: CrearClienteProps) {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
 
   const handleSuccess = () => {
-    window.location.reload();
+    setMostrarFormulario(false);
+    if (onSuccess) {
+      onSuccess();
+    } else {
+      window.location.reload();
+    }
   };
 
   return (
@@ -35,12 +57,17 @@ export function CrearCliente() {
   );
 }
 
-// Botón para crear proveedores
-export function CrearProveedor() {
+
+export function CrearProveedor({ onSuccess }: CrearProveedorProps) {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
 
   const handleSuccess = () => {
-    window.location.reload();
+    setMostrarFormulario(false);
+    if (onSuccess) {
+      onSuccess();
+    } else {
+      window.location.reload();
+    }
   };
 
   return (
@@ -63,12 +90,17 @@ export function CrearProveedor() {
   );
 }
 
-// Botón para crear facturas
-export function CrearFactura() {
+
+export function CrearFactura({ onSuccess }: CrearFacturaProps) {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
 
   const handleSuccess = () => {
-    window.location.reload();
+    setMostrarFormulario(false);
+    if (onSuccess) {
+      onSuccess();
+    } else {
+      window.location.reload();
+    }
   };
 
   return (
@@ -91,12 +123,17 @@ export function CrearFactura() {
   );
 }
 
-// Botón para crear pedidos
-export function CrearPedido() {
+
+export function CrearPedido({ onSuccess }: CrearPedidoProps) {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
 
   const handleSuccess = () => {
-    window.location.reload();
+    setMostrarFormulario(false);
+    if (onSuccess) {
+      onSuccess();
+    } else {
+      window.location.reload();
+    }
   };
 
   return (
